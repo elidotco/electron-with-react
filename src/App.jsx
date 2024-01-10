@@ -1,10 +1,17 @@
 import React from "react";
+import Welcome from "./pages/Welcome.jsx";
+import { HashRouter, Route, Router, Routes } from "react-router-dom";
+import Login from "./pages/Login.jsx";
 
 function App() {
   return (
     <div>
-      <h1 className="text-green-700">💖 Hello World!</h1>
-      <p>Welcome to your Electron application.</p>
+      <HashRouter>
+        <Routes>
+          <Route path="/" Component={Welcome} />
+          <Route path="/login" Component={Login} />
+        </Routes>
+      </HashRouter>
     </div>
   );
 }
